@@ -1,0 +1,141 @@
+.container {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monthsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    gap: 2rem;
+    padding: 0.5rem 0;
+}
+
+.yearChanger {
+    background-image: url('https://source.unsplash.com/1200x240/?dogs');
+    background-size: cover;
+    background-position: center;
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 120rem;
+    padding: 8rem 0;
+    color: #eee;
+}
+
+.chevronIcon {
+    padding: 1rem;
+    filter: drop-shadow(0.3rem 0.5rem rgba(128, 0, 128, 0.6));
+}
+
+.chevronIcon:hover {
+    cursor: pointer;
+}
+
+.calendarForm {
+    max-width: 30%;
+}
+
+.yearChanger input {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    font-size: 6rem;
+    max-width: 100%;
+    text-align: center;
+    color: #eee;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.4);;
+}
+
+.yearChanger input:focus {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.monthName {
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: purple;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+.monthName > p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #eee;
+    padding: 0.3rem;
+}
+
+.calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: #ddd;
+    gap: 0.1rem;
+    border: #ccc solid 0.1rem;
+}
+
+.calendarElement, .calendarMarkdown, .calendarSunday {
+    padding: 0.5rem;
+    text-align: right;
+    background-color: white;
+    font-weight: 500;
+}
+
+.calendarMarkdown {
+    text-align: center;
+    font-weight: 900;
+}
+
+.calendarElement {
+    color: #222;
+}
+
+.calendarSunday {
+    color: crimson;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: purple;
+    margin-top: 1rem;
+    width: 100%;
+    color: #eee;
+}
+
+.footer a {
+    color: inherit;
+    transition: all ease-in-out 0.3s;
+}
+
+.footer a:hover {
+    color: blue;
+}
+
+.heartIcon {
+    color: crimson;
+}
+
+@media (max-width: 500px) {
+    .calendarForm {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 350px) {
+    .calendarForm {
+        max-width: 60%;
+    }
+}
+

@@ -1,0 +1,43 @@
+.monthName {
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: purple;
+    box-shadow: 0.5rem 0.5rem 1rem #777;
+}
+
+.monthName > p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #eee;
+    padding: 0.3rem;
+}
+
+.calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: #ddd;
+    gap: 0.1rem;
+    border: #ccc solid 0.1rem;
+}
+
+.calendarElement, .calendarMarkdown, .calendarSunday {
+    padding: 0.5rem;
+    text-align: right;
+    background-color: white;
+    font-weight: 500;
+}
+
+.calendarMarkdown {
+    text-align: center;
+    font-weight: 900;
+}
+
+.calendarElement {
+    color: #222;
+}
+
+.calendarSunday {
+    color: crimson;
+}
