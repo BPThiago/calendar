@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronLeft, faChevronRight, faHeart} from '@fortawesome/free-solid-svg-icons'
 
-
 async function getStaticPaths() {
     const years = await fetch('https://calendar-api-six.vercel.app/api/?initial=1900&final=2100')
         .then((res) => res.json())
@@ -42,7 +41,7 @@ function ShowCalendar({year, queryYear}) {
     const router = useRouter();
 
     useEffect(() => {
-        setInputYear(queryYear);
+        setInputYear(queryYear ? queryYear : new Date().getFullYear());
     }, 
     [queryYear])
 

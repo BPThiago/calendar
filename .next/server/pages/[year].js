@@ -178,7 +178,7 @@ function ShowCalendar({ year , queryYear  }) {
     let { 0: inputYear , 1: setInputYear  } = (0,external_react_.useState)(queryYear);
     const router = (0,router_.useRouter)();
     (0,external_react_.useEffect)(()=>{
-        setInputYear(queryYear);
+        setInputYear(queryYear ? queryYear : new Date().getFullYear());
     }, [
         queryYear
     ]);
